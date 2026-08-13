@@ -1,0 +1,306 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* 1. Cabeçalho */
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 15px 20px;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    border-radius: 8px;
+}
+
+.logo-texto h1 {
+    font-size: 1.6rem;
+    color: #38bdf8;
+}
+
+.slogan {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* 2. Menu de Navegação */
+nav {
+    background-color: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    color: #f1f5f9;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* 3. Banner Principal */
+.banner {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://via.placeholder.com/1200x500') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.banner-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banner h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #e2e8f0;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-banner {
+    background-color: #0284c7;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.4);
+}
+
+.btn-banner:hover {
+    background-color: #0369a1;
+    transform: translateY(-3px);
+}
+
+.btn-card {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.btn-card:hover {
+    background-color: #0284c7;
+    transform: translateY(-2px);
+}
+
+/* 4. Estrutura das Seções */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.secao {
+    background-color: #ffffff;
+    margin: 30px 0;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #0f172a;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #0284c7;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.texto-sobre p {
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+/* 5. Serviços (Cards) */
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card-servico {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-servico img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.conteudo-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.conteudo-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.conteudo-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* 6. Galeria */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* 7. Depoimentos */
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-depoimento {
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #0284c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comentario {
+    font-style: italic;
+    color: #334155;
+    margin-bottom: 15px;
+}
+
+.autor h4 {
+    color: #0f172a;
+}
+
+/* 8. Contato */
+.caixa-contato {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.info-contato p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+/* 9. Rodapé */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsividade (Dispositivos Móveis) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    .banner h2 {
+        font-size: 1.6rem;
+    }
+
+    .secao {
+        padding: 20px;
+    }
+}
